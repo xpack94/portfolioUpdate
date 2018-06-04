@@ -1,0 +1,172 @@
+
+
+/*styling the header ----------------------------------*/
+.wrapper nav{
+   /* background-color: #191919 !important;
+    border-bottom: 1px solid #222 !important;
+   
+    box-shadow: rgb(38, 38, 38) 0px 1px 0px;
+    background-color: rgb(25, 25, 25) !important;
+     background-image: -webkit-linear-gradient(top, rgb(40, 40, 40), rgb(25, 25, 25));
+    line-height: 12px;
+    z-index: 9999;
+    border-bottom: 1px solid rgb(34, 34, 34);
+    background-repeat: no-repeat;*/
+    
+    /*----------------------------*/
+    
+    
+}
+.wrapper nav.static{
+     
+    line-height: 12px;
+    z-index: 9999;
+    
+}
+
+.wrapper nav.static.fix{
+    background-color: #191919 !important;
+    border-bottom: 1px solid #222 !important;
+   
+    box-shadow: rgb(38, 38, 38) 0px 1px 0px;
+    background-color: rgb(25, 25, 25) !important;
+     background-image: -webkit-linear-gradient(top, rgb(40, 40, 40), rgb(25, 25, 25));
+    line-height: 12px;
+    z-index: 9999;
+    border-bottom: 1px solid rgb(34, 34, 34);
+    background-repeat: no-repeat;
+}
+
+
+nav.static a {
+    color: #7f7f7f !important;
+     color: rgba(200, 200, 200,1) !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    font-size: 0.875rem;
+    font-family: sans-serif cursive !important;
+    text-transform: uppercase;
+}
+nav.static.fix a{
+     color: #3b3b3b !important;
+     color: rgba(204, 204, 204, 0.5) !important;
+}
+nav.static  a:hover{
+    color:rgba(255,255,255,1) !important;
+    
+}
+nav.static.fix  a:hover{
+    color:rgba(255,255,255,0.7) !important;
+    
+}
+/*end header---------------------*/
+
+/*styling the landing page ------------------*/
+
+.landing_page{
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    
+    background-image: url(images/landing.jpg);
+    background-size: cover;
+    
+}
+
+/*end landing page----------------------------------------*/
+
+/* styling greetings--------------------------------------*/
+.greetings{
+    position: absolute;
+    top:35%;
+    left: 21%;
+    text-align: center;
+   padding-top: 1px;
+    
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+   
+}
+.greetings h3{
+    font-size: 40px; 
+    margin-bottom: 10px;
+}
+.greetings a{
+    padding: 10px;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 400;
+    border:1px solid #fff;
+    
+}
+.greetings a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.greetings h3 span{
+    padding: 0;
+    margin: -6px;
+    font-size: 40px;
+}
+.greetings h3 span:hover{
+    color:#00B233;
+}
+
+
+/*end greetings--------------------------------------------*/
+
+/*styling the skills section------------------------------*/
+
+
+.skills{
+   
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 75px;
+   
+}
+.skills > p{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 500;
+    color: #777;
+    text-transform: uppercase;
+    
+    
+}
+.skills > p::after{
+    content: "";
+    display: inline-block;
+    width: 25px;
+    border-bottom: 2px solid #777;
+    position: relative;
+    top: 9px;
+    left: -38px;
+   
+}
+.skills .skill_picture{
+   
+    font-size: 40px;
+    color: #BF7E00;
+    opacity: 0.8;
+}
+
+.skills .skill_title{
+     color: #BF7E00;
+    font-weight: 500;
+    line-height: 12px;
+}
+.skills .skill_text {
+    color:#888;
+    
+}
+
+
+
+
+
+/*end skills section---------------------------------------*/
