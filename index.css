@@ -2,21 +2,11 @@
 
 /*styling the header ----------------------------------*/
 .wrapper nav{
-   /* background-color: #191919 !important;
-    border-bottom: 1px solid #222 !important;
-   
-    box-shadow: rgb(38, 38, 38) 0px 1px 0px;
-    background-color: rgb(25, 25, 25) !important;
-     background-image: -webkit-linear-gradient(top, rgb(40, 40, 40), rgb(25, 25, 25));
-    line-height: 12px;
-    z-index: 9999;
-    border-bottom: 1px solid rgb(34, 34, 34);
-    background-repeat: no-repeat;*/
+   margin-top: 21px;
     
-    /*----------------------------*/
-    
-    
+        
 }
+
 .wrapper nav.static{
      
     line-height: 12px;
@@ -89,7 +79,7 @@ display: block;
 .greetings{
     position: absolute;
     top:35%;
-    left: 21%;
+    left: 25%;
     text-align: center;
    padding-top: 1px;
     
