@@ -49,6 +49,13 @@ nav.static.fix  a:hover{
     color:rgba(255,255,255,0.7) !important;
     
 }
+
+nav a.navbar-brand{
+    color:#BF7E00 !important;
+    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+    font-size: 1.25rem;
+}
+
 /*end header---------------------*/
 
 /*styling the landing page ------------------*/
@@ -98,11 +105,15 @@ display: block;
     color: #fff;
     font-weight: 400;
     border:1px solid #fff;
+    background-color: #BF7E00;
+    border-color: #BF7E00;
+    opacity: 0.8;
     
 }
 .greetings a:hover{
     background-color: #fff;
     color: #000;
+    border-color: #fff;
 }
 
 .greetings h3 span{
