@@ -216,6 +216,10 @@ section.title > p::after{
 .about .about_text{
     color: #6c757d!important;
 }
+.about .row{
+    display: flex;
+    justify-content: center;
+}
 
 
 /*end of about me -------------------------------------*/
