@@ -1,6 +1,7 @@
 window.onload = function(e) {
 
     stickyNav();
+    smoothScrolling();
 
 };
 
@@ -25,4 +26,21 @@ function check_offset(pageOffset,navbarOffset){
          }else{
              navbar.classList.remove("fix");
          }
+}
+
+function smoothScrolling(e){
+   
+    let links= Array.from(document.getElementsByClassName("nav-link"));
+    
+     links.forEach(link=>{
+       link.addEventListener("click",scrollTo); 
+    });
+}
+
+function scrollTo(e){
+    e.preventDefault();
+    let section=document.getElementById(e.target.getAttribute("href").substring(1));
+    section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" ,duration:2000 });
+    
+    
 }
