@@ -144,7 +144,7 @@ display: block;
 }
 section.title > p{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.5em;
     margin: 0;
     font-family: 'Fjalla One', sans-serif;
     font-weight: 500;
@@ -159,7 +159,7 @@ section.title > p{
     height: 2px;
     background-color:#333;
     margin-top: 3px;
-    margin-bottom: 75px;
+    margin-bottom: 80px;
 }
 
 .skills .skill_picture{
@@ -168,8 +168,8 @@ section.title > p{
     align-items: center;
     justify-content: center;
     margin: 0 auto 7px auto; 
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.7em;
+    height: 2.7em;
     
     font-size: 40px;
     color: rgba(255,255,255,1);
@@ -185,6 +185,7 @@ section.title > p{
     font-weight: 500;
     line-height: 12px;
     margin-top: 25px;
+    font-size: 1.35rem;
 }
 .skills .skill_text {
     color:#888;   

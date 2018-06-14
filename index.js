@@ -40,7 +40,7 @@ function smoothScrolling(e){
 function scrollTo(e){
     e.preventDefault();
     let section=document.getElementById(e.target.getAttribute("href").substring(1));
-    section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" ,duration:2000 });
+    section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest"  });
     
     
 }
