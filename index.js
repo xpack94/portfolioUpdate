@@ -36,12 +36,16 @@ function smoothScrolling(e){
      links.forEach(link=>{
        link.addEventListener("click",scrollToElement); 
     });
+    
+    
 }
 
 function scrollToElement(e){
     e.preventDefault();
     let section=document.getElementById(e.target.getAttribute("href").substring(1));
-    section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest"  });
+    
+    //section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest"  });
+    scrollSmoothlyTo(section.offsetTop);
     
     
 }
@@ -56,21 +60,26 @@ function scroll_on_tour_press(){
    
     });
     
+        
+}
+
 function scrollSmoothlyTo(offset){
-    const STEP=50;
+    const STEP=70;
     const TIME=70;
     let newOffset=0;
     let currentOffset=window.pageYOffset;
-    if(currentOffset+STEP<=offset){
+    if(currentOffset-STEP>=offset){
+        newOffset=currentOffset-STEP;  
+        window.scrollTo(currentOffset,newOffset);
+        setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
+    }else if(currentOffset+STEP<=offset){
+        console.log(currentOffset+STEP,offset);
         newOffset=currentOffset+STEP;   
         window.scrollTo(currentOffset,newOffset);
         setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
     }
    
     
-    
-    
-}    
     
     
 }
