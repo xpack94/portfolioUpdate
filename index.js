@@ -34,11 +34,11 @@ function smoothScrolling(e){
     let links= Array.from(document.getElementsByClassName("nav-link"));
     
      links.forEach(link=>{
-       link.addEventListener("click",scrollTo); 
+       link.addEventListener("click",scrollToElement); 
     });
 }
 
-function scrollTo(e){
+function scrollToElement(e){
     e.preventDefault();
     let section=document.getElementById(e.target.getAttribute("href").substring(1));
     section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest"  });
@@ -49,12 +49,28 @@ function scrollTo(e){
 function scroll_on_tour_press(){
     let button = document.querySelector(".tour");
     let landing_page = document.querySelector(".landing_page");
+    let skills_section=document.querySelector(".skills");
     button.addEventListener("click",(e)=>{
         e.preventDefault();
-        window.scroll({
-                       top:landing_page.clientHeight,
-                       behavior:'smooth'});    
+        scrollSmoothlyTo(skills.offsetTop);
+   
     });
+    
+function scrollSmoothlyTo(offset){
+    const STEP=50;
+    const TIME=70;
+    let newOffset=0;
+    let currentOffset=window.pageYOffset;
+    if(currentOffset+STEP<=offset){
+        newOffset=currentOffset+STEP;   
+        window.scrollTo(currentOffset,newOffset);
+        setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
+    }
+   
+    
+    
+    
+}    
     
     
 }
