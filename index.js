@@ -69,19 +69,30 @@ function scrollSmoothlyTo(offset){
     let newOffset=0;
     let currentOffset=window.pageYOffset;
     let navbar_height=document.querySelector(".navbar").clientHeight;
-  
-    if(currentOffset+navbar_height-STEP>=offset){
-        newOffset=currentOffset-STEP;  
-        window.scrollTo(currentOffset,newOffset);
-        setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
-    }else if(currentOffset+navbar_height+STEP<=offset){
-        console.log(currentOffset+STEP,offset);
-        newOffset=currentOffset+STEP;   
-        window.scrollTo(currentOffset,newOffset);
-        setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
-    }
+    
    
     
     
+    if(currentOffset+navbar_height-STEP>=offset){
+        newOffset=currentOffset-STEP;  
+        window.scrollTo(currentOffset,newOffset);
+        if(checkIfEndScroll()) return
+        setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
+    }else if(currentOffset+navbar_height+STEP<=offset){
+        newOffset=currentOffset+STEP;
+        window.scrollTo(currentOffset,newOffset);
+         if (checkIfEndScroll()) return 
+        setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
+    }
+   
+
+}
+
+function checkIfEndScroll(){
     
+    if(window.pageYOffset==0 || window.pageYOffset+window.innerHeight==document.body.clientHeight){
+        return true;     
+    }else{
+        return false;
+    }
 }
