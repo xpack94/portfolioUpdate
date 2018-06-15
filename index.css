@@ -193,6 +193,8 @@ section.title > p{
 .skills .skill_text p{
     font-size: 15px;
     color: #777;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .row>div{
