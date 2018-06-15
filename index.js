@@ -64,15 +64,17 @@ function scroll_on_tour_press(){
 }
 
 function scrollSmoothlyTo(offset){
-    const STEP=70;
+    const STEP=50;
     const TIME=70;
     let newOffset=0;
     let currentOffset=window.pageYOffset;
-    if(currentOffset-STEP>=offset){
+    let navbar_height=document.querySelector(".navbar").clientHeight;
+  
+    if(currentOffset+navbar_height-STEP>=offset){
         newOffset=currentOffset-STEP;  
         window.scrollTo(currentOffset,newOffset);
         setTimeout(function(){scrollSmoothlyTo(offset);},TIME);
-    }else if(currentOffset+STEP<=offset){
+    }else if(currentOffset+navbar_height+STEP<=offset){
         console.log(currentOffset+STEP,offset);
         newOffset=currentOffset+STEP;   
         window.scrollTo(currentOffset,newOffset);
