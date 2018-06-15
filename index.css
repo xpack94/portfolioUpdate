@@ -242,3 +242,58 @@ section.title > p{
 
 
 /*end of about me -------------------------------------*/
+
+
+/*styling the projects section--------------------------*/
+.projects{
+    padding: 100px 10px;
+    
+}
+.projects .image_holder{
+    display: flex;
+    -webkit-display:flex;
+    -moz-display:flex;
+    -ms-display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 300px;
+}
+
+.projects .image_holder .browser_top{
+    align-self: stretch;
+    flex: 0.5;
+    background-color: #DDD;
+    border-radius: 50px 50px 0 0 ;
+    position: relative;
+    text-align: left;
+}
+.image_holder .browser_top span{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 3px;
+    position: relative;
+    left: 25px;
+    top:12px;
+    border-radius: 50%;
+}
+span.color-red{
+    background-color: #7F0000;
+}
+span.color-yellow{
+    background-color: #D2D700;
+}
+span.color-green{
+    background-color: #007100;
+}
+
+
+.projects .image_holder .image_container{
+    flex:3;
+    background-image: url(images/projects/twitch.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/*end of the projects section----------------------------*/
