@@ -295,5 +295,9 @@ span.color-green{
     background-position: center center;
 }
 
+.projects .row{
+    margin-top: 80px;
+}
+
 
 /*end of the projects section----------------------------*/
