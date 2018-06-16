@@ -291,6 +291,8 @@ span.color-green{
 .projects .image_holder .image_container{
     flex:3;
     height: 224px;
+    border:2px solid #DDD;
+    border-top: 0px;
 }
 .projects .image_holder .image_container a{
     display: inline-block;
