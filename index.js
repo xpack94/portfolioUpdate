@@ -3,6 +3,11 @@ window.onload = function(e) {
     stickyNav();
     smoothScrolling();
     scroll_on_tour_press();
+   
+   
+   
+    
+    
 
 };
 
@@ -96,3 +101,18 @@ function checkIfEndScroll(){
         return false;
     }
 }
+
+
+function checkScroll(){
+    let sections=[...document.querySelectorAll("section")];
+    window.onscroll=(e)=>{
+        getOfssetOfSections(sections);
+    }
+}
+
+
+
+
+}
+
+

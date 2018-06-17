@@ -1,8 +1,21 @@
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+body {
+  -ms-overflow-style:none;
+}
+
+
 /*styling the header ----------------------------------*/
 .wrapper nav{
    margin-top: 21px;
-    
+   
         
 }
 
@@ -60,6 +73,9 @@ nav a.navbar-brand{
     font-size: 1.25rem;
 }
 
+nav a.nav-link.active{
+    color:#BF7E00 !important
+}
 /*end header---------------------*/
 
 /*styling the landing page ------------------*/
@@ -314,4 +330,8 @@ span.color-green{
 }
 
 
+
+
 /*end of the projects section----------------------------*/
+
+
