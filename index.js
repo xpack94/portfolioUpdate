@@ -3,7 +3,7 @@ window.onload = function(e) {
     stickyNav();
     smoothScrolling();
     scroll_on_tour_press();
-   
+    checkScroll();
    
    
     
@@ -105,14 +105,40 @@ function checkIfEndScroll(){
 
 function checkScroll(){
     let sections=[...document.querySelectorAll("section")];
-    window.onscroll=(e)=>{
-        getOfssetOfSections(sections);
-    }
+    window.addEventListener("scroll", debounce(getOfssetOfSections(sections)));
 }
 
-
-
-
+function getOfssetOfSections(sections){
+   console.count(sections);
+    sections.forEach((value,index)=>{
+      
+        if(window.innerHeight+window.pageYOffset>value.offsetTop+150){
+             name= value.classList[0];
+            
+             document.querySelector(".active").classList.remove("active");
+             document.querySelector(`a[href^="#${value.classList[0]}"]`).classList.add("active");
+            
+        }
+    });
 }
+
+function debounce(func, wait = 20, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+
+
+
 
 
