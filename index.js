@@ -105,11 +105,10 @@ function checkIfEndScroll(){
 
 function checkScroll(){
     let sections=[...document.querySelectorAll("section")];
-    window.addEventListener("scroll", debounce(getOfssetOfSections(sections)));
+    window.addEventListener("scroll", debounce(()=>getOfssetOfSections(sections)));
 }
 
 function getOfssetOfSections(sections){
-   console.count(sections);
     sections.forEach((value,index)=>{
       
         if(window.innerHeight+window.pageYOffset>value.offsetTop+150){
@@ -123,6 +122,7 @@ function getOfssetOfSections(sections){
 }
 
 function debounce(func, wait = 20, immediate = true) {
+    console.log(func);
       var timeout;
       return function() {
         var context = this, args = arguments;
