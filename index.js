@@ -4,7 +4,7 @@ window.onload = function(e) {
     smoothScrolling();
     scroll_on_tour_press();
     checkScroll();
-   
+  
    
     
     
@@ -30,7 +30,13 @@ function check_offset(pageOffset,navbarOffset){
      if(pageOffset>=navbarOffset){
             navbar.classList.add("fix");
          }else{
-             navbar.classList.remove("fix");
+              navbar.classList.remove("fix");
+              let active_link=document.querySelector(".active");
+              if(active_link){
+                  active_link.classList.remove("active");
+              }
+                    
+                
          }
 }
 
@@ -48,8 +54,6 @@ function smoothScrolling(e){
 function scrollToElement(e){
     e.preventDefault();
     let section=document.getElementById(e.target.getAttribute("href").substring(1));
-    
-    //section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest"  });
     scrollSmoothlyTo(section.offsetTop);
     
     
@@ -62,15 +66,15 @@ function scroll_on_tour_press(){
     button.addEventListener("click",(e)=>{
         e.preventDefault();
         scrollSmoothlyTo(skills.offsetTop);
-   
+       
     });
     
         
 }
 
 function scrollSmoothlyTo(offset){
-    const STEP=50;
-    const TIME=70;
+    const STEP=20;
+    const TIME=30;
     let newOffset=0;
     let currentOffset=window.pageYOffset;
     let navbar_height=document.querySelector(".navbar").clientHeight;
@@ -104,17 +108,20 @@ function checkIfEndScroll(){
 
 
 function checkScroll(){
+     
     let sections=[...document.querySelectorAll("section")];
     window.addEventListener("scroll", debounce(()=>getOfssetOfSections(sections)));
 }
 
 function getOfssetOfSections(sections){
+  
+    
     sections.forEach((value,index)=>{
       
         if(window.innerHeight+window.pageYOffset>value.offsetTop+150){
              name= value.classList[0];
-            
-             document.querySelector(".active").classList.remove("active");
+             if(document.querySelector(".active"))
+                document.querySelector(".active").classList.remove("active");
              document.querySelector(`a[href^="#${value.classList[0]}"]`).classList.add("active");
             
         }
