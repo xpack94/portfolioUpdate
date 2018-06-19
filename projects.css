@@ -21,7 +21,7 @@ Build the scene and rotate on hover
 	perspective: 1000px;
 }
 
-.movie {
+.project {
 	width: 260px;
 	height: 352px;
 	-webkit-transform-style: preserve-3d;
@@ -35,7 +35,7 @@ Build the scene and rotate on hover
 	transition: transform 350ms;
 }
 
-.movie:hover {
+.project:hover {
 	-webkit-transform: rotateY(-78deg) translateZ(20px);
 	-moz-transform: rotateY(-78deg) translateZ(20px);
 	transform: rotateY(-78deg) translateZ(20px);
@@ -45,8 +45,8 @@ Build the scene and rotate on hover
 Transform and style the two planes
 **************************************/
 
-.movie .poster, 
-.movie .info {
+.project .poster, 
+.project .info {
 	position: absolute;
 	width: 260px;
 	height: 400px;
@@ -56,7 +56,7 @@ Transform and style the two planes
 	backface-visibility: hidden;
 }
 
-.movie .poster  {
+.project .poster  {
 	-webkit-transform: translateZ(130px);
 	-moz-transform: translateZ(130px);
 	transform: translateZ(130px);
@@ -66,7 +66,7 @@ Transform and style the two planes
     
 }
 
-.movie .info {
+.project .info {
 	-webkit-transform: rotateY(90deg) translateZ(130px);
 	-moz-transform: rotateY(90deg) translateZ(130px);
 	transform: rotateY(90deg) translateZ(130px);
@@ -78,7 +78,7 @@ Transform and style the two planes
 Shadow beneath the 3D object
 **************************************/
 
-.csstransforms3d .movie::after {
+.csstransforms3d .project::after {
 	content: '';
 	width: 260px;
 	height: 260px;
@@ -96,12 +96,12 @@ Shadow beneath the 3D object
 	transition: box-shadow 350ms;
 }
 
-.csstransforms3d .movie:hover::after {
+.csstransforms3d .project:hover::after {
 	box-shadow: 20px -5px 50px rgba(0,0,0,0.3);
 }
 
 /*************************************
-Movie information
+project information
 **************************************/
 
 .info header {
@@ -138,29 +138,29 @@ Movie information
 Generate "lighting" using box shadows
 **************************************/
 
-.movie .poster,
-.movie .info,
-.movie .info header {
+.project .poster,
+.project .info,
+.project .info header {
 	-webkit-transition: box-shadow 350ms;
 	-moz-transition: box-shadow 350ms;
 	transition: box-shadow 350ms;
 }
 
-.csstransforms3d .movie .poster {
+.csstransforms3d .project .poster {
 	box-shadow: inset 0px 0px 40px rgba(255,255,255,0);
 }
 
-.csstransforms3d .movie:hover .poster {
+.csstransforms3d .project:hover .poster {
 	box-shadow: inset 300px 0px 40px rgba(255,255,255,0.8);
 }
 
-.csstransforms3d .movie .info, 
-.csstransforms3d .movie .info header {
+.csstransforms3d .project .info, 
+.csstransforms3d .project .info header {
 	box-shadow: inset -300px 0px 40px rgba(0,0,0,0.5);
 }
 
-.csstransforms3d .movie:hover .info, 
-.csstransforms3d .movie:hover .info header {
+.csstransforms3d .project:hover .info, 
+.csstransforms3d .project:hover .info header {
 	box-shadow: inset 0px 0px 40px rgba(0,0,0,0);
 }
 
@@ -168,16 +168,16 @@ Generate "lighting" using box shadows
 Posters and still images
 **************************************/
 
-.scene:nth-child(1) .movie .poster {
+.scene:nth-child(1) .project .poster {
   background-image: url(images/projects/twitchtv.jpg);
 }
 
 .scene:nth-child(2) .poster {
-  background-image: url(images/projects/podomoroProject.png);
+  background-image: url(images/projects/podo.jpg);
 }
 
 .scene:nth-child(3) .poster {
-  background-image: url(../img/poster03.jpg);
+  background-image: url(images/projects/wikipediaProject.png);
 }
 
 .scene:nth-child(1) .info header {
@@ -189,14 +189,14 @@ Posters and still images
 }
 
 .scene:nth-child(3) .info header {
-	background-image: url(../img/still03.jpg);
+	background-image: url(images/projects/wikipedia.png);
 }
 
 /*************************************
 Fallback
 **************************************/
-.no-csstransforms3d .movie .poster, 
-.no-csstransforms3d .movie .info {
+.no-csstransforms3d .project .poster, 
+.no-csstransforms3d .project .info {
 	position: relative;
 }
 
