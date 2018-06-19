@@ -5,6 +5,8 @@
 .stage {
 	list-style: none;
 	padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*************************************
@@ -15,7 +17,7 @@ Build the scene and rotate on hover
 	width: 260px;
 	height: 400px;
 	margin: 30px;
-	float: left;
+	
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	perspective: 1000px;
@@ -118,6 +120,8 @@ project information
 .info header h1 {
 	margin: 0 0 2px;
 	font-size: 1.4em;
+    color:#BF7E00;
+    font-weight: 500;
 }
 
 .info header .rating {

@@ -118,7 +118,7 @@ function getOfssetOfSections(sections){
     
     sections.forEach((value,index)=>{
       
-        if(window.innerHeight+window.pageYOffset>value.offsetTop+150){
+        if(window.innerHeight+window.pageYOffset>value.offsetTop+value.clientHeight/2){
              name= value.classList[0];
              if(document.querySelector(".active"))
                 document.querySelector(".active").classList.remove("active");
