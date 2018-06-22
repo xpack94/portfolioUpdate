@@ -35,6 +35,7 @@ Build the scene and rotate on hover
 	-webkit-transition: -webkit-transform 350ms;
 	-moz-transition: -moz-transform 350ms;
 	transition: transform 350ms;
+    cursor: pointer;
 }
 
 .project:hover {
