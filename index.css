@@ -42,6 +42,9 @@ body {
     background-color: #212529 !important;
     margin-top: 0px;
 }
+.navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(191,126,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
 
 nav.static a {
@@ -95,10 +98,11 @@ display: block;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/landing.jpg");
   background-size: cover;
   height: 100vh;
-  
+  animation: 5s focus infinite;
     
     
 }
+
 
 /*end landing page----------------------------------------*/
 
@@ -109,7 +113,6 @@ display: block;
     left: 25%;
     text-align: center;
    padding-top: 1px;
-    
     color: #fff;
     font-weight: 400;
     font-family: 'Quicksand', sans-serif;

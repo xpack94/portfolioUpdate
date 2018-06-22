@@ -7,6 +7,7 @@
 	padding: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*************************************
@@ -17,7 +18,6 @@ Build the scene and rotate on hover
 	width: 260px;
 	height: 400px;
 	margin: 30px;
-	
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	perspective: 1000px;
