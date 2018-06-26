@@ -117,7 +117,10 @@ function getOfssetOfSections(sections){
   
     
     sections.forEach((value,index)=>{
-      
+        
+        if (window.pageYOffset==0 &&  document.querySelector(".active")){
+            document.querySelector(".active").classList.remove("active");
+        }
         if(window.innerHeight+window.pageYOffset>value.offsetTop+value.clientHeight/2){
              name= value.classList[0];
              if(document.querySelector(".active"))
@@ -129,7 +132,6 @@ function getOfssetOfSections(sections){
 }
 
 function debounce(func, wait = 20, immediate = true) {
-    console.log(func);
       var timeout;
       return function() {
         var context = this, args = arguments;
@@ -144,6 +146,10 @@ function debounce(func, wait = 20, immediate = true) {
       };
     };
 
+
+
+    
+   
 
 
 
