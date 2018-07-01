@@ -79,6 +79,27 @@ nav a.navbar-brand{
 nav a.nav-link.active{
     color:#BF7E00 !important
 }
+nav a.nav-link{
+    position: relative;
+    padding: 0 !important;
+    margin: 0 0.5rem;
+}
+nav a.nav-link:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    border-bottom: 3px solid #BF7E00;
+    margin-top: 4px;
+    transition: 0.2s ease-in-out;
+    left: 50%;
+}
+nav a.nav-link:hover:after{
+    content: "";
+    width: 100%;
+    left: 0%;
+    
+}
 /*end header---------------------*/
 
 /*styling the landing page ------------------*/

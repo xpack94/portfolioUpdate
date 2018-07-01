@@ -1,4 +1,21 @@
 
+/*990px---------------------------------------------*/
+@media screen and (max-width:990px){
+    
+    nav a.nav-link:after{
+        content: "";
+        width: 0;
+    }
+    nav a.nav-link:hover:after{
+        content:"";
+        width: 0;
+    }
+    
+}
+
+/*end of 850px---------------------------------------------*/
+
+
 /*850px---------------------------------------------*/
 @media screen and (max-width:850px){
     
